@@ -26,6 +26,13 @@ public static class SpectreConsoleHelpers
         Console.ReadLine();
     }
 
+    /// <summary>
+    /// Prints the name of the calling method in cyan color to the console.
+    /// </summary>
+    /// <param name="methodName">
+    /// The name of the calling method. This parameter is optional and is automatically 
+    /// populated with the name of the method that invoked this method, unless explicitly specified.
+    /// </param>
     public static void PrintCyan([CallerMemberName] string? methodName = null)
     {
         AnsiConsole.MarkupLine($"[cyan]{methodName}[/]");
