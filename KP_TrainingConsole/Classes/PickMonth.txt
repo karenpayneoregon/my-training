@@ -1,0 +1,15 @@
+using KP_TrainingConsole.Classes;
+using Spectre.Console;
+
+namespace KP_TrainingConsole;
+internal partial class Program
+{
+    static void Main(string[] args)
+    {
+        AnsiConsole.MarkupLine("[bold green]Hello, World![/]");
+
+        var month = Prompts.PickMonth();
+        AnsiConsole.WriteLine($"I agree. {month} is a great month!");
+        SpectreConsoleHelpers.ExitPrompt();
+    }
+}
