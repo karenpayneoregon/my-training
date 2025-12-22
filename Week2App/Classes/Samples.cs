@@ -28,7 +28,7 @@ internal class Samples
         }
     }
 
-    public static void GetLevel(int value)
+    public static void GetLevel1(int value)
     {
         switch (value)
         {
@@ -45,6 +45,21 @@ internal class Samples
                 break;
         }
     }
+
+    public static void GetLevel2(int value)
+    {
+        switch (value)
+        {
+            case >= 1 and <= 3:
+                Console.WriteLine("Low");
+                break;
+            default:
+                Console.WriteLine("High");
+                break;
+        }
+    }
+
+
 
     public static void TypeCheckingSample1(object obj)
     {
