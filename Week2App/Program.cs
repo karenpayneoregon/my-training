@@ -28,6 +28,10 @@ internal class Program
         Console.WriteLine($"Person category: {Samples.GetPersonCategory(person)}");
 
         Console.WriteLine();
+        Samples.GetLevel1(0);
+        Samples.GetLevel1(2);
+
+        Console.WriteLine();
         Console.WriteLine("Press ENTER to exit...");
         Console.ReadLine();
         

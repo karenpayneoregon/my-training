@@ -34,9 +34,11 @@ internal class Samples
                 Console.WriteLine("Low");
                 break;
             }
-
-            default:
+            case > 3:
                 Console.WriteLine("High");
+                break;
+            default:
+                Console.WriteLine("???");
                 break;
         }
     }
@@ -207,6 +209,8 @@ internal class Samples
         }
     }
 
+    #region Simulation for data operations
+
     public void DisplayPerson(Person person)
     {
         Console.WriteLine($"{person.Name}, Age {person.Age}");
@@ -232,10 +236,22 @@ internal class Samples
         Console.WriteLine($"Delete person: {person.Name}, Age {person.Age}");
     }
 
+    #endregion
+
 
 }
 
-public record Person(string Name, int Age);
+public class Person(string name, int age)
+{
+    public string Name { get; init; } = name;
+    public int Age { get; init; } = age;
+
+    public void Deconstruct(out string name, out int age)
+    {
+        name = this.Name;
+        age = this.Age;
+    }
+}
 
 public enum Direction
 {
