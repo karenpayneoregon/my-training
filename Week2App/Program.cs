@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Drawing;
 using Week2App.Classes;
 
 namespace Week2App;
@@ -19,6 +20,7 @@ internal class Program
         
         Color seasonColor = Samples.GetSeasonColor(7);
         Console.WriteLine($"Season color: {seasonColor}");
+
         Console.WriteLine();
         
         Samples.EnumSample(Direction.East);
