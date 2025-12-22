@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -46,6 +47,23 @@ internal class Samples
         }
     }
 
+    // Simplified syntax using 'or' pattern
+    public static void GetLevel1A(int value)
+    {
+        switch (value)
+        {
+            case 1 or 2 or 3:  // Using 'or' pattern which optimizes multiple cases
+                {
+                Console.WriteLine("Low");
+                break;
+            }
+
+            default:
+                Console.WriteLine("High");
+                break;
+        }
+    }
+
     public static void GetLevel2(int value)
     {
         switch (value)
@@ -58,12 +76,11 @@ internal class Samples
                 break;
         }
     }
+    
 
-
-
-    public static void TypeCheckingSample1(object obj)
+    public static void TypeCheckingSample1(object sender)
     {
-        switch (obj)
+        switch (sender)
         {
             case int intValue:
                 Console.WriteLine($"Integer value: {intValue}");
@@ -104,6 +121,24 @@ internal class Samples
         }
 
     }
+
+    public static Color GetSeasonColor(int month)
+    {
+        switch (month)
+        {
+            case 1 or 2 or 12:
+                return Color.Red;
+            case > 2 and < 6:
+                return Color.CadetBlue;
+            case > 5 and < 9:
+                return Color.Yellow;
+            case > 8 and < 12:
+                return Color.Cyan;
+            default:
+                return Color.White;
+        }
+    }
+
 
     // Person person = new("Alice", 17);
     public static string GetPersonCategory(Person person)
