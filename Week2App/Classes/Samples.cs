@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static System.Runtime.InteropServices.JavaScript.JSType;
+﻿using System.Drawing;
 
 namespace Week2App.Classes;
 internal class Samples
@@ -139,6 +133,29 @@ internal class Samples
         }
     }
 
+    public static void EnumSample(Direction currentDirection = Direction.North)
+    {
+
+        switch (currentDirection)
+        {
+            case Direction.North:
+                Console.WriteLine("Facing North");
+                break;
+            case Direction.South:
+                Console.WriteLine("Facing South");
+                break;
+            case Direction.East:
+                Console.WriteLine("Facing East");
+                break;
+            case Direction.West:
+                Console.WriteLine("Facing West");
+                break;
+            default:
+                Console.WriteLine("Unknown direction");
+                break;
+        }
+
+    }
 
     // Person person = new("Alice", 17);
     public static string GetPersonCategory(Person person)
@@ -158,6 +175,81 @@ internal class Samples
         }
     }
 
+    public void HandlePersonOperation(PersonOperation operation, Person person)
+    {
+        switch (operation)
+        {
+            case PersonOperation.Display:
+                DisplayPerson(person);
+                break;
+
+            case PersonOperation.Create:
+                CreatePerson(person);
+                break;
+
+            case PersonOperation.Read:
+                ReadPerson(person);
+                break;
+
+            case PersonOperation.Update:
+                UpdatePerson(person);
+                break;
+
+            case PersonOperation.Delete:
+                DeletePerson(person);
+                break;
+
+            default:
+                throw new ArgumentOutOfRangeException(
+                    nameof(operation),
+                    operation,
+                    "Unsupported person operation");
+        }
+    }
+
+    public void DisplayPerson(Person person)
+    {
+        Console.WriteLine($"{person.Name}, Age {person.Age}");
+    }
+
+    public void CreatePerson(Person person)
+    {
+        Console.WriteLine("Create new person");
+    }
+
+    public void ReadPerson(Person person)
+    {
+        Console.WriteLine($"Read person: {person.Name}, Age {person.Age}");
+    }
+
+    public void UpdatePerson(Person person)
+    {
+        Console.WriteLine($"Update person: {person.Name}, Age {person.Age}");
+    }
+
+    public void DeletePerson(Person person)
+    {
+        Console.WriteLine($"Delete person: {person.Name}, Age {person.Age}");
+    }
+
+
 }
 
 public record Person(string Name, int Age);
+
+public enum Direction
+{
+    North, 
+    South, 
+    East, 
+    West
+}
+
+public enum PersonOperation
+{
+    Display,
+    Create,
+    Read,
+    Update,
+    Delete
+}

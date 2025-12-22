@@ -1,0 +1,44 @@
+
+'break' Keyword in the switch Statement
+	The break keyword in a switch statement stops the program from running the next cases after a match is found. 
+	Without a break, the program will keep running the following cases, even if they don't match.
+
+'default' Keyword in the switch Statement
+	The default keyword in a switch statement is used when no other case matches the value. 
+	It acts like an "else" statement and runs when none of the specified cases are true. Including a 
+	default case is optional, but it's useful to handle unexpected values.
+
+
+Why do we use Switch Statements instead of if-else statements?
+	* Readability: When you have a number of criteria to compare to a single value or expression, 
+	  the switch statements can help make the code easier to understand. Coding understanding and 
+	  organization are enhanced by the representation of individual branches of logic in each situation.
+
+	* Efficiency: Switch statements are often more efficient than long chains of if-else statements because 
+	  they use a jump table or similar mechanisms, resulting in faster execution for large numbers of cases.
+
+	* Intent: Using a switch statement conveys the intention that you are comparing a single value against 
+	  multiple possible values, making your code more self-explanatory.
+
+	* Maintenance: Switch statements are easier to maintain when you need to add or remove cases 
+	  because you only need to modify the switch block, whereas if-else chains require changes throughout the code.
+
+	* Enumerations: Switch statements work well with enumerated types, making code cleaner and less error-prone 
+	  when dealing with predefined sets of values.
+
+	* Code Quality: Code analyzers and compilers can better optimize switch statements, leading to 
+	  potentially more efficient and error-free code.
+
+
+Disadvantages of switch Statement
+	1. Limited to Constant Values
+	   Cannot use ranges, conditions, or variables in case labels (unless using pattern matching in newer C# versions).
+
+	2. No Logical Expressions
+	   Doesn’t support complex logical comparisons like if (x > 5 && x < 10).
+
+	3. Risk of Missing break
+	   Forgetting the break statement may cause logical errors or compile-time errors in C#.
+
+	4. Not Ideal for Complex Logic
+	  Becomes hard to manage or understand when each case involves lengthy or nested logic.
