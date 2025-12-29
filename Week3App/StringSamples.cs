@@ -174,7 +174,7 @@ internal static class StringSamples
         string str1 = "Hello World";
         string str2 = "hello world";
 
-
+        bool areEqual = string.Equals(str1, str2, StringComparison.OrdinalIgnoreCase);
 
 
 
