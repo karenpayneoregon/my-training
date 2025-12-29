@@ -1,12 +1,43 @@
 ﻿using System.Text;
 
-
-// ReSharper disable UseStringInterpolation
-// ReSharper disable UseIndexFromEndExpression
-
 namespace Week3App;
+/// <summary>
+/// Provides a collection of static methods and extension methods for performing various string operations.
+/// </summary>
+/// <remarks>
+/// This class includes methods for basic string manipulations, comparisons, formatting, and extensions.
+/// It is designed to demonstrate common string handling techniques in C#.
+/// </remarks>
 internal static class StringSamples
 {
+    /// <summary>
+    /// Demonstrates basic string operations such as concatenation, interpolation, 
+    /// substring search, and checking for substring existence.
+    /// </summary>
+    /// <remarks>
+    /// This method showcases common string handling techniques in C#, including:
+    /// - Declaring and initializing strings.
+    /// - Concatenating strings using the '+' operator.
+    /// - Using string interpolation for more readable formatting.
+    /// - Finding substrings using <see cref="string.IndexOf(string, StringComparison)"/>.
+    /// - Checking for substring existence using <see cref="string.Contains(string)"/>.
+    /// - Displaying raw string literals.
+    /// </remarks>
+    /// <example>
+    /// Example usage:
+    /// <code>
+    /// BasicStringOperations();
+    /// </code>
+    /// Output:
+    /// <code>
+    /// Concatenated string: Hello, World!
+    /// Interpolated string: Hello, World!
+    /// Index of 'World': 7
+    /// Does message contain 'World'? True
+    /// Line 1
+    /// Line 2
+    /// </code>
+    /// </example>
     public static void BasicStringOperations()
     {
         // String declaration and initialization
@@ -39,13 +70,39 @@ internal static class StringSamples
             """;
         Console.WriteLine(rawString);
     }
+    
 
+    /// <summary>
+    /// Checks if a source string contains a target substring.
+    /// </summary>
+    /// <remarks>
+    /// This method performs a case-sensitive check to determine if the specified target substring
+    /// exists within the source string. It outputs the result to the console.
+    /// </remarks>
+    /// <example>
+    /// Example usage:
+    /// <code>
+    /// string source = "The quick brown fox";
+    /// string target = "FOX";
+    /// bool contains = source.Contains(target);
+    /// Console.WriteLine($"Does source contain '{target}'? {contains}");
+    /// </code>
+    /// </example>
     public static void StringContains()
     {
+        // Case-sensitive
+        
+        /*
+         *
+         *
+         * 
+         */
+
+
+
         string source = "The quick brown fox";
         string target = "FOX";
 
-        // TODO I do not understand why this is case sensitive by default
         bool contains = source.Contains(target);
 
         if (contains)
