@@ -32,6 +32,12 @@ internal static class StringSamples
         bool containsWorld = message.Contains("World");
         Console.WriteLine($"Does message contain 'World'? {containsWorld}"); // Output: True
 
+        string rawString =
+            """
+            Line 1
+            Line 2
+            """;
+        Console.WriteLine(rawString);
     }
 
     public static void StringContains()
