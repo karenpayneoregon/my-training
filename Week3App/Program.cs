@@ -4,7 +4,7 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        //StringSamples.BasicStringOperations();
+        StringSamples.BasicStringOperations();
         //StringSamples.StringContains();
         //StringSamples.StringContainsCaseInsensitive();
         //StringSamples.CompareStrings();

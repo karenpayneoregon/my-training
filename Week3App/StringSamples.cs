@@ -19,6 +19,9 @@ internal static class StringSamples
 
         // String interpolation (more readable)
         string interpolatedMessage = $"{greeting}, {name}!";
+
+        string someVar = $"{greeting} {name} Today is {DateTime.Now:M/d/yy}";
+        Console.WriteLine(someVar);
         Console.WriteLine($"Interpolated string: {interpolatedMessage}"); // Output: Hello, World!
 
         // Finding a substring
