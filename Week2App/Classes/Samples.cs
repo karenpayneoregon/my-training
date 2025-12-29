@@ -38,8 +38,7 @@ internal class Samples
                 Console.WriteLine("High");
                 break;
             default:
-                Console.WriteLine("???");
-                break;
+                throw new ArgumentException($"Invalid value: {value}");
         }
     }
 
@@ -95,7 +94,7 @@ internal class Samples
 
         switch (sender)
         {
-            case int integer when integer > 0:
+            case int integer and > 0:
                 Console.WriteLine("Positive integer");
                 break;
 
