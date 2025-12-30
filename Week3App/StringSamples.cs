@@ -91,14 +91,6 @@ internal static class StringSamples
     public static void StringContains()
     {
         // Case-sensitive
-        
-        /*
-         *
-         *
-         * 
-         */
-
-
 
         string source = "The quick brown fox";
         string target = "FOX";
@@ -116,7 +108,7 @@ internal static class StringSamples
     }
     public static void StringContainsCaseInsensitive()
     {
-        string source = "The quick brown fox ";
+        string source = "The quick brown fox";
         string target = "FOX";
 
         bool contains = source.Contains(target, StringComparison.OrdinalIgnoreCase);
@@ -294,6 +286,8 @@ internal static class StringSamples
     public static string TrimLastCharacter(this string sender)
         => string.IsNullOrWhiteSpace(sender) ? sender : sender[..^1];
 
+
+
     public static string TrimLastCharacterConventional(this string sender, char trimChar)
         => string.IsNullOrWhiteSpace(sender) ? sender : sender.TrimEnd(trimChar);
 
@@ -306,6 +300,10 @@ internal static class StringSamples
     public static void StringBuilderDemo()
     {
         // StringBuilder is mutable, making it more efficient for repeated modifications
+
+        /*
+         * StringBuilder is mutable, making it more efficient for repeated modifications
+         */
         StringBuilder sb = new StringBuilder();
 
         // Appending strings
