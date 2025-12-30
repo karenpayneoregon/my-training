@@ -1,6 +1,6 @@
 # About
 
-- See `DisplaySamples.cs` under `Classes\SpectreSamples` for examples for workin wit
+- See `DisplaySamples.cs` under `Classes\SpectreSamples` for examples for workin with
 	* Custom messages
 	* Asking for user input
 
