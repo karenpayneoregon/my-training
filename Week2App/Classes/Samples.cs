@@ -30,10 +30,10 @@ internal class Samples
             case 1:
             case 2:
             case 3:
-            {
-                Console.WriteLine("Low");
-                break;
-            }
+                {
+                    Console.WriteLine("Low");
+                    break;
+                }
             case > 3:
                 Console.WriteLine("High");
                 break;
@@ -49,9 +49,9 @@ internal class Samples
         {
             case 1 or 2 or 3:  // Using 'or' pattern which optimizes multiple cases
                 {
-                Console.WriteLine("Low");
-                break;
-            }
+                    Console.WriteLine("Low");
+                    break;
+                }
 
             default:
                 Console.WriteLine("High");
@@ -71,8 +71,23 @@ internal class Samples
                 break;
         }
     }
-    
 
+
+    /// <summary>
+    /// Demonstrates type checking using a <see langword="switch"/> statement.
+    /// </summary>
+    /// <param name="sender">
+    /// The object to be checked. The method identifies the type of the object and performs
+    /// specific actions based on its type.
+    /// </param>
+    /// <remarks>
+    /// This method handles the following types:
+    /// <list type="bullet">
+    /// <item><description><see cref="int"/>: Prints the integer value.</description></item>
+    /// <item><description><see cref="string"/>: Prints the string value.</description></item>
+    /// <item><description>Other types: Prints "Unknown type".</description></item>
+    /// </list>
+    /// </remarks>
     public static void TypeCheckingSample1(object sender)
     {
         switch (sender)
@@ -254,9 +269,9 @@ public class Person(string name, int age)
 
 public enum Direction
 {
-    North, 
-    South, 
-    East, 
+    North,
+    South,
+    East,
     West
 }
 
