@@ -149,6 +149,18 @@ internal class Samples
         }
     }
 
+
+    public static Color GetSeasonColorMerged(int month)
+        => month switch
+        {
+            1 or 2 or 12 => Color.Red,
+            > 2 and < 6 => Color.CadetBlue,
+            > 5 and < 9 => Color.Yellow,
+            > 8 and < 12 => Color.Cyan,
+            _ => Color.White
+        };
+
+
     public static void EnumSample(Direction currentDirection = Direction.North)
     {
 
