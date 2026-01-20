@@ -130,6 +130,21 @@ internal class Samples
 
     }
 
+    /// <summary>
+    /// Validates a <see cref="MockedData.ValidPersonCore"/> instance for adding a record in Entity Framework Core.
+    /// </summary>
+    /// <remarks>
+    /// This method uses the <see cref="PersonValidator"/> to validate the <see cref="MockedData.ValidPersonCore"/> object.
+    /// It includes specific rule sets, namely <c>Names</c> and <c>Birth</c>, during the validation process.
+    /// </remarks>
+    /// <example>
+    /// Example usage:
+    /// <code>
+    /// Samples.ValidateForAddingRecordForEntityFrameworkCore();
+    /// </code>
+    /// </example>
+    /// <seealso cref="PersonValidator"/>
+    /// <seealso cref="RuleNames"/>
     public static void ValidateForAddingRecordForEntityFrameworkCore()
     {
         AnsiConsole.MarkupLine($"[cyan]{nameof(ValidateForAddingRecordForEntityFrameworkCore)}[/] excludes primary key");
