@@ -23,7 +23,15 @@ namespace IncludeRuleSetsApp.Models;
 public class RuleNames
 {
     public const string AllRules = "*";
-    public string Names { get; set; }
+    /// <summary>
+    /// Gets or sets the rule name associated with all properties validation.
+    /// </summary>
+    /// <remarks>
+    /// This property is used to specify rules related to validating all properties.
+    /// It is commonly utilized in conjunction with validation logic, such as 
+    /// <see cref="PersonValidator"/>, to enforce specific constraints on all fields.
+    /// </remarks>
+    public string FirstAndLastNames { get; set; }
     public string Identifier { get; set; }
     public string Birth { get; set; }
     

@@ -8,9 +8,9 @@ internal partial class Program
 {
     private static void Main(string[] args)
     {
-
+  
         Examples();
-        UsingExtensions();
+        //UsingExtensions();
         AnsiConsole.Write(new Rule("[yellow]Continue[/]"));
 
         Console.ReadLine();
@@ -18,15 +18,15 @@ internal partial class Program
 
     private static void Examples()
     {
-        Samples.ValidatePersonWithRuleSetsWildcard();
-        Samples.ValidatePersonWithRuleSetsSpecific();
-        Samples.ValidateAllPropertiesWithRuleSetsWildcard();
+        //Samples.ValidatePersonWithRuleSetsWildcard();
+        //Samples.ValidatePersonWithRuleSetsSpecific();
+        //Samples.ValidateAllPropertiesWithRuleSetsWildcard();
         Samples.ValidateForAddingRecordForEntityFrameworkCore();
     }
 
     private static void UsingExtensions()
     {
-        AnsiConsole.MarkupLine($"[cyan]{nameof(UsingExtensions)}[/] Rules {nameof(RuleNames.Names)} and {nameof(RuleNames.Birth)}");
+        AnsiConsole.MarkupLine($"[cyan]{nameof(UsingExtensions)}[/] Rules {nameof(RuleNames.FirstAndLastNames)} and {nameof(RuleNames.Birth)}");
 
         var result1 = MockedData.ValidPerson.AllRules();
         Console.WriteLine($"All Rules Valid: {result1.IsValid.ToYesNo()}");
@@ -35,7 +35,7 @@ internal partial class Program
         Console.WriteLine($"All Rules Valid for Invalid Person: {result2.IsValid.ToYesNo()}");
 
         var result3 = MockedData.InvalidPerson.SelectedRules(
-            nameof(RuleNames.Names), 
+            nameof(RuleNames.FirstAndLastNames), 
             nameof(RuleNames.Birth));
         
         if (result3.IsValid)

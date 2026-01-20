@@ -35,7 +35,7 @@ internal class Samples
 
         ValidationResult result = validator.Validate(MockedData.InvalidPerson, options 
             => options.IncludeRuleSets(
-                nameof(RuleNames.Names),
+                nameof(RuleNames.FirstAndLastNames),
                 nameof(RuleNames.Identifier), 
                 nameof(RuleNames.Birth)));
 
@@ -154,7 +154,7 @@ internal class Samples
 
         ValidationResult result = validator.Validate(MockedData.ValidPersonCore, options 
             => options.IncludeRuleSets(
-                nameof(RuleNames.Names),
+                nameof(RuleNames.FirstAndLastNames),
                 nameof(RuleNames.Birth)));
         
         if (result.IsValid)
