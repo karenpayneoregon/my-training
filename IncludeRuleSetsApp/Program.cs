@@ -34,7 +34,10 @@ internal partial class Program
         var result2 = MockedData.InvalidPerson.AllRules();
         Console.WriteLine($"All Rules Valid for Invalid Person: {result2.IsValid.ToYesNo()}");
 
-        var result3 = MockedData.InvalidPerson.SelectedRules(nameof(RuleNames.Names), nameof(RuleNames.Birth));
+        var result3 = MockedData.InvalidPerson.SelectedRules(
+            nameof(RuleNames.Names), 
+            nameof(RuleNames.Birth));
+        
         if (result3.IsValid)
         {
             

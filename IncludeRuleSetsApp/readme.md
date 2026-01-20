@@ -4,8 +4,10 @@ This example demonstrates how to use FluentValidation with rule sets to validate
 
 [Article](https://dev.to/karenpayneoregon/fluentvalidation-rule-sets-35ck)
 
-## Rule Sets
 
+
+## Rule Sets
+- `*`: Represents all available rule sets.
 - `Names`: Validates that `FirstName` and `LastName` are not null.
 - `Identifier`: Validates that `PersonId` is not equal to 0.
 - `BirthDateRule`: Validates that `BirthDate` is a valid date according to a custom rule defined in the `BirthDateRule` extension method.

@@ -63,7 +63,7 @@ public static class Validations
     public static ValidationResult AllRules(this Person person)
     {
         var validator = new PersonValidator();
-        return validator.Validate(person, options => options.IncludeRuleSets("*"));
+        return validator.Validate(person, options => options.IncludeRuleSets(RuleNames.AllRules));
     }
 
     /// <summary>

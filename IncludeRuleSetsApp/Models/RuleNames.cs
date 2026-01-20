@@ -22,6 +22,7 @@ namespace IncludeRuleSetsApp.Models;
 /// </remarks>
 public class RuleNames
 {
+    public const string AllRules = "*";
     public string Names { get; set; }
     public string Identifier { get; set; }
     public string Birth { get; set; }

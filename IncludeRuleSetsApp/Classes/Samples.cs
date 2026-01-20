@@ -33,10 +33,11 @@ internal class Samples
 
         var validator = new PersonValidator();
 
-        ValidationResult result = validator.Validate(MockedData.InvalidPerson, options => options.IncludeRuleSets(
-            nameof(RuleNames.Names),
-            nameof(RuleNames.Identifier),
-            nameof(RuleNames.Birth)));
+        ValidationResult result = validator.Validate(MockedData.InvalidPerson, options 
+            => options.IncludeRuleSets(
+                nameof(RuleNames.Names),
+                nameof(RuleNames.Identifier), 
+                nameof(RuleNames.Birth)));
 
 
         if (result.IsValid)
@@ -70,7 +71,8 @@ internal class Samples
         var validator = new PersonValidator();
 
         // Use wildcard to include all rule sets
-        var result = validator.Validate(MockedData.InvalidPerson, options => options.IncludeRuleSets("*"));
+        var result = validator.Validate(MockedData.InvalidPerson, options 
+            => options.IncludeRuleSets(RuleNames.AllRules));
 
         if (result.IsValid)
         {
@@ -109,8 +111,9 @@ internal class Samples
         var validator = new PersonValidator();
 
         // Use wildcard to include all rule sets
-        var result = validator.Validate(MockedData.ValidPerson, options => options.IncludeRuleSets("*"));
-
+        var result = validator.Validate(MockedData.ValidPerson, options => 
+                options.IncludeRuleSets(RuleNames.AllRules));
+         
         if (result.IsValid)
         {
             Console.WriteLine("Validation succeeded.");
@@ -134,9 +137,10 @@ internal class Samples
         var validator = new PersonValidator();
 
 
-        ValidationResult result = validator.Validate(MockedData.ValidPersonCore, options => options.IncludeRuleSets(
-            nameof(RuleNames.Names),
-            nameof(RuleNames.Birth)));
+        ValidationResult result = validator.Validate(MockedData.ValidPersonCore, options 
+            => options.IncludeRuleSets(
+                nameof(RuleNames.Names),
+                nameof(RuleNames.Birth)));
         
         if (result.IsValid)
         {
