@@ -3,6 +3,7 @@ using IComparerIEqualityComparerApp.Classes;
 using IComparerIEqualityComparerApp.Classes.Comparers;
 using IComparerIEqualityComparerApp.Classes.SystemCode;
 using IComparerIEqualityComparerApp.Models;
+using Serilog;
 using Spectre.Console;
 
 namespace IComparerIEqualityComparerApp;
@@ -10,12 +11,36 @@ internal partial class Program
 {
     static void Main(string[] args)
     {
- 
+        //Log.Information("Application started by {UserName}", Environment.UserName);
         //DistinctPeople();
-        CompareProducts();
+        //CompareProducts();
         //PersonSortedByLastNameExample();
-        
+
+
+        var p = Person();
+
+        if (p.FirstName == "John")
+        {
+            p.FirstName = "Jane";
+        }
+        else
+        {
+
+        }
+
+
         SpectreConsoleHelpers.ExitPrompt();
+    }
+
+    public static Person Person()
+    {
+        return new()
+        {
+            Id = 1,
+            FirstName = "John",
+            LastName = "Doe",
+            BirthDate = new DateOnly(1990, 1, 1)
+        };
     }
 
     /// <summary>
@@ -42,7 +67,7 @@ internal partial class Program
         AnsiConsole.MarkupLine("[bold]Distinct People:[/]");
         foreach (var person in distinctPeople)
         {
-            AnsiConsole.MarkupLine($"[DeepPink3]{person.FirstName, 8} {person.LastName} {person.BirthDate}[/]");
+            AnsiConsole.MarkupLine($"[DeepPink3]{person.FirstName,8} {person.LastName} {person.BirthDate}[/]");
         }
 
         Console.WriteLine();
@@ -80,7 +105,7 @@ internal partial class Program
         {
             Console.WriteLine(person);
         }
-        
+
         Console.WriteLine();
     }
 
@@ -113,17 +138,18 @@ internal partial class Program
         };
 
         AnsiConsole.MarkupLine("[bold]Products SequenceEqual[/]");
-        
+
         var productDetailsHaveChanged = !updatedProducts.SequenceEqual(originalProducts, new ProductComparer());
 
         if (productDetailsHaveChanged)
         {
             AnsiConsole.MarkupLine("    [bold DeepPink3]Product details have changed:[/]");
-        } else    
+        }
+        else
         {
             AnsiConsole.MarkupLine("    [bold DeepPink3]Product details have not changed.[/]");
         }
-        
+
 
         Console.WriteLine();
     }
