@@ -15,6 +15,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "For teaching", "For teachin
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{089100B1-113F-4E66-888A-E83F3999EAFD}"
 	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
 		readme.md = readme.md
 	EndProjectSection
 EndProject
@@ -55,6 +56,12 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Week 5", "Week 5", "{A237CF3C-47D9-F5B2-5D44-543501CBF7B6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitSeparatorApp", "DigitSeparatorApp\DigitSeparatorApp.csproj", "{7FB5AFE9-F42A-45D9-A7AF-B80024B749D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicInterfacesApp", "BasicInterfacesApp\BasicInterfacesApp.csproj", "{ECE60C48-2857-4F1A-981A-B78FE8AC6DAC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Week 6 - Working with interfaces", "Week 6 - Working with interfaces", "{D0D471CE-8A54-4832-7B60-964DD1DBC9E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfaceLibrary", "InterfaceLibrary\InterfaceLibrary.csproj", "{A8AFD9DC-0613-41BB-ACD3-80B3D1B258D3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -126,6 +133,14 @@ Global
 		{7FB5AFE9-F42A-45D9-A7AF-B80024B749D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7FB5AFE9-F42A-45D9-A7AF-B80024B749D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7FB5AFE9-F42A-45D9-A7AF-B80024B749D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECE60C48-2857-4F1A-981A-B78FE8AC6DAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECE60C48-2857-4F1A-981A-B78FE8AC6DAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECE60C48-2857-4F1A-981A-B78FE8AC6DAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECE60C48-2857-4F1A-981A-B78FE8AC6DAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8AFD9DC-0613-41BB-ACD3-80B3D1B258D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8AFD9DC-0613-41BB-ACD3-80B3D1B258D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8AFD9DC-0613-41BB-ACD3-80B3D1B258D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8AFD9DC-0613-41BB-ACD3-80B3D1B258D3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -148,6 +163,8 @@ Global
 		{3B546EFD-87A2-435E-BBB6-DDFE123BC134} = {AB2685FA-FE15-6072-975D-5229BCA5A58F}
 		{2525CE11-12E8-EC5B-9165-AECBBD3C89B3} = {A237CF3C-47D9-F5B2-5D44-543501CBF7B6}
 		{7FB5AFE9-F42A-45D9-A7AF-B80024B749D5} = {A237CF3C-47D9-F5B2-5D44-543501CBF7B6}
+		{ECE60C48-2857-4F1A-981A-B78FE8AC6DAC} = {D0D471CE-8A54-4832-7B60-964DD1DBC9E2}
+		{A8AFD9DC-0613-41BB-ACD3-80B3D1B258D3} = {D0D471CE-8A54-4832-7B60-964DD1DBC9E2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {ECC5DC37-5B52-4858-BD2C-C89B74C7CA5D}
