@@ -31,12 +31,3 @@ internal partial class Program
     }
 }
 
-public abstract class Client
-{
-    public string FirstName { get; set; }
-}
-
-public class User : Client
-{
-    public string LastName { get; set; }
-}
